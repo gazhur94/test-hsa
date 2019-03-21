@@ -8,5 +8,5 @@
 3. php artisan migrate
 4. php artisan db:seed
 
-Email:    admin@gmail.com
-Password: admin
+- Email:    admin@gmail.com
+- Password: admin
