@@ -78,7 +78,7 @@
                 let files = Array.from(event.target.files);
                 for (let item of files) {
                     if (item.type === 'application/pdf') {
-                        this.filesOrder = item;
+                        this.filesOrder.push(item);
                     } else {
                         alert('Only pdf files allowed')
                     }
