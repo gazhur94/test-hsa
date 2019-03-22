@@ -61,13 +61,24 @@
 
             copyDocument: function(id) {
                 axios.post('/copy-document' , {id: id}).then((response) => {
-                    this.getDocuments()
+                    for (let doc of this.documents) {
+                        if (doc.id == id) {
+                            this.documents.push(doc);
+                            return;
+                        }
+                    }
                 })
             },
 
             deleteDocument: function(id) {
                 axios.delete('/delete-document' , { data: {id: id}}).then((response) => {
-                    this.getDocuments()
+                    for (let doc of this.documents) {
+                        if (doc.id == id) {
+                            let index = this.documents.indexOf(doc);
+                            this.documents.splice(index, 1);
+                            return;
+                        }
+                    }
                 })
             }
         }

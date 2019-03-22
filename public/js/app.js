@@ -1842,7 +1842,34 @@ __webpack_require__.r(__webpack_exports__);
       axios.post('/copy-document', {
         id: id
       }).then(function (response) {
-        _this2.getDocuments();
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+          for (var _iterator = _this2.documents[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var doc = _step.value;
+
+            if (doc.id == id) {
+              _this2.documents.push(doc);
+
+              return;
+            }
+          }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion && _iterator.return != null) {
+              _iterator.return();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
+          }
+        }
       });
     },
     deleteDocument: function deleteDocument(id) {
@@ -1853,7 +1880,36 @@ __webpack_require__.r(__webpack_exports__);
           id: id
         }
       }).then(function (response) {
-        _this3.getDocuments();
+        var _iteratorNormalCompletion2 = true;
+        var _didIteratorError2 = false;
+        var _iteratorError2 = undefined;
+
+        try {
+          for (var _iterator2 = _this3.documents[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+            var doc = _step2.value;
+
+            if (doc.id == id) {
+              var index = _this3.documents.indexOf(doc);
+
+              _this3.documents.splice(index, 1);
+
+              return;
+            }
+          }
+        } catch (err) {
+          _didIteratorError2 = true;
+          _iteratorError2 = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
+              _iterator2.return();
+            }
+          } finally {
+            if (_didIteratorError2) {
+              throw _iteratorError2;
+            }
+          }
+        }
       });
     }
   }
@@ -1994,7 +2050,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   item = _arr[_i];
 
                   if (item.type === 'application/pdf') {
-                    this.filesOrder = item;
+                    this.filesOrder.push(item);
                   } else {
                     alert('Only pdf files allowed');
                   }
@@ -54001,8 +54057,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! c:\Users\User\Downloads\OSPanel\domains\documlist\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! c:\Users\User\Downloads\OSPanel\domains\documlist\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\User\Downloads\OSPanel\domains\test-hsa\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\User\Downloads\OSPanel\domains\test-hsa\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
